@@ -57,12 +57,10 @@ public class GraphicTemperatureDistribution extends JPanel {
                 });
             }
 
-            // Запустите потоки
             for (Thread thread : threads) {
                 thread.start();
             }
-
-            // Дождитесь завершения всех потоков
+            
             try {
                 for (Thread thread : threads) {
                     thread.join();
